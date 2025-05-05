@@ -1,0 +1,17 @@
+.completed {
+    text-decoration: line-through;
+    color: grey;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  li {
+    border: 1px solid #ccc;
+    margin-bottom: 6px;
+    padding: 8px;
+  }
+  .form input {
+    margin-right: 8px;
+  }
+  

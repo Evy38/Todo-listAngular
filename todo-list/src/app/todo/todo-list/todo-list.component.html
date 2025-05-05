@@ -1,0 +1,17 @@
+<h1 style="margin:15px">{{titlePage}}</h1>
+
+<div class="form">
+  <input type="text" [(ngModel)]="taskTitle" placeholder="Titre de la tâche" />
+  <input type="text" [(ngModel)]="taskAuthor" placeholder="Auteur" />
+  <button (click)="addTask()">Ajouter</button>
+</div>
+
+<div class="task-list">
+  @for (task of tasks; track task.id) {
+    <app-todo-item
+      [task]="task"
+      (delete)="deleteTask($event)"
+      (toggle)="toggleCompleted($event)"
+    />
+  }
+</div>
